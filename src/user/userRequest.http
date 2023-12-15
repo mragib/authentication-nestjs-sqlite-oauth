@@ -1,0 +1,34 @@
+@token =eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzAyMjI0Nzk1LCJleHAiOjE3MDIyMjQ4MjV9.PQDeiDMEwl55asMCJhL9j2pRAJ2oHXI7bZpiwyUWvX8
+POST http://localhost:8000/api/register
+Content-Type: application/json
+
+{
+    "first_name":"ragib",
+    "last_name":"shahriar",
+    "password":"password",
+    "confirm_password":"password",
+    "email":"diner4@example.com",
+    "address":"Gangni"
+
+}
+
+### Login ###
+POST http://localhost:8000/api/login
+Content-Type: application/json
+
+{
+    "email":"diner4@example.com",
+    "password":"password"
+}
+
+### User ###
+GET http://localhost:8000/api/user
+Authorization: Bearer {{token}}
+
+### Refresh Token ###
+POST http://localhost:8000/api/refresh
+Content-Type: application/json
+
+### logout ###
+POST http://localhost:8000/api/logout
+Content-Type: application/json

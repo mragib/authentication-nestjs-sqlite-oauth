@@ -1,0 +1,18 @@
+###Forget password ###
+POST http://localhost:8000/api/forget
+Content-Type: application/json
+
+{
+    "email":"diner4@example.com"
+}
+
+
+###Reset password ###
+POST http://localhost:8000/api/reset
+Content-Type: application/json
+
+{
+    "token":"a0j63541fe",
+    "password":"1234",
+    "confirm_password":"1234"
+}
